@@ -24,6 +24,6 @@
   },
   "devices": [
     "/dev/ttyAMA0:/dev/ttyAMA0:rwm",
-    "/dev/spidev0.0"
+    "/dev/spidev0.0:rwm"
   ]
 }
