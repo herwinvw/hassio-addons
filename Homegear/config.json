@@ -10,6 +10,7 @@
     "SYS_ADMIN",
     "SYS_RAWIO"
   ],
+  "full_access":true,
   "map": ["config:rw", "share:rw"],
   "ports": {
     "2001/tcp": 2001,
