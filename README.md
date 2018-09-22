@@ -1,3 +1,8 @@
+# herwinvw: trying this out with https://allgeek.de/2017/07/31/cc1101-spi-raspberry-adapter-fuer-homegear-homematicmax/
+Some modules removed.
+To enter homegear commandline:
+docker exec -it addon_f6d7c2ea_rpi-homegear homegear -r
+
 # Homegear as a Hassio add-on
 
 This add-on repository contains the Homegear add-on for Hassio (Home Assistant).
