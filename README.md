@@ -1,5 +1,6 @@
-# changes by herwinvw: trying this out with a CC1101 SPI Adapter
+# Changes by herwinvw: trying this out with a CC1101 SPI Adapter
 Using https://allgeek.de/2017/07/31/cc1101-spi-raspberry-adapter-fuer-homegear-homematicmax/
+
 Changes:
 - Some modules removed
 - Acces rights changed to full_access
