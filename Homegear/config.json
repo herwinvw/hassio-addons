@@ -1,6 +1,6 @@
 {
   "name": "Homegear",
-  "version": "0.21.1",
+  "version": "0.21.2",
   "slug": "rpi-homegear",
   "description": "Homegear as a Hassio add-on",
   "startup": "before",
@@ -13,12 +13,11 @@
   "arch": [
     "amd64",
     "armhf",
-    "armel",
     "i386"
   ],
-  "full_access":true,
   "map": ["config:rw", "share:rw"],
   "ports": {
+    "2000/tcp": 2000,
     "2001/tcp": 2001,
     "2002/tcp": 2002,
     "2003/tcp": 2003
