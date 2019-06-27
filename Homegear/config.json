@@ -6,7 +6,7 @@
   "startup": "before",
   "boot": "auto",
   "gpio": true,
-  "full_access":true,
+  "apparmor": false,
   "privileged": [
     "SYS_ADMIN",
     "SYS_RAWIO"
