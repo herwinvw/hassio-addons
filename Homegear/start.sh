@@ -19,7 +19,6 @@ else
 	rm -Rf /var/lib/homegear/modules/*
 	rm -Rf /var/lib/homegear/flows/nodes/*
 	cp -a /var/lib/homegear.data/modules/* /var/lib/homegear/modules/
-	cp -a /var/lib/homegear.data/flows/nodes/* /var/lib/homegear/flows/nodes/
 fi
 
 if ! [ -f /etc/homegear/dh1024.pem ]; then
@@ -35,5 +34,4 @@ if ! [ -f /etc/homegear/dh1024.pem ]; then
 fi
 
 service homegear start
-service homegear-influxdb start
 tail -f /var/log/homegear/homegear.log
