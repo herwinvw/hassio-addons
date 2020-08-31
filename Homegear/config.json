@@ -7,7 +7,6 @@
   "boot": "auto",
   "gpio": true,
   "apparmor": false,
-  "fullaccess": true,
   "privileged": [
     "SYS_ADMIN",
     "SYS_RAWIO"
