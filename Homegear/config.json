@@ -14,7 +14,8 @@
   "arch": [
     "amd64",
     "armhf",
-    "i386"
+    "i386",
+    "armv7"
   ],
   "map": ["config:rw", "share:rw"],
   "ports": {
