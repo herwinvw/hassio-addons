@@ -4,6 +4,9 @@ ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base:7.5.0
 
 FROM $BUILD_FROM
 
+# Set shell
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
 MAINTAINER Jan Schulz-Hofen <hassio@0.jan.sh>
 #ENV architecture=${BUILD_ARCH}
 
