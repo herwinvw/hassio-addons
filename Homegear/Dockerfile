@@ -1,6 +1,8 @@
 # Taken from https://github.com/Homegear/Homegear-Docker/blob/master/rpi-stable/Dockerfile
 #FROM resin/rpi-raspbian:stretch
-ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base:7.5.0
+#ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base:7.5.0
+ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:7.5.0
+
 
 FROM $BUILD_FROM
 
