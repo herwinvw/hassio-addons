@@ -2,9 +2,6 @@
 #FROM resin/rpi-raspbian:stretch
 ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base:7.5.0
 
-ARG BUILD_FROM
-ARG BUILD_ARCH
-
 FROM $BUILD_FROM
 
 MAINTAINER Jan Schulz-Hofen <hassio@0.jan.sh>
