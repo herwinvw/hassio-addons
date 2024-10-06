@@ -1,9 +1,12 @@
 # Taken from https://github.com/Homegear/Homegear-Docker/blob/master/rpi-stable/Dockerfile
 #FROM resin/rpi-raspbian:stretch
 ARG BUILD_FROM
+ARG BUILD_ARCH
+
 FROM $BUILD_FROM
 
 MAINTAINER Jan Schulz-Hofen <hassio@0.jan.sh>
+ENV architecture=${BUILD_ARCH}
 
 RUN apt-get update && apt-get -y install apt-transport-https wget ca-certificates apt-utils gnupg
 RUN wget https://homegear.eu/packages/Release.key && apt-key add Release.key && rm Release.key
