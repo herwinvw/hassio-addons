@@ -9,6 +9,7 @@
   "gpio": true,
   "apparmor": false,
   "init": false,
+  "host_pid": true,
   "privileged": [
     "SYS_ADMIN",
     "SYS_RAWIO"
