@@ -16,8 +16,10 @@ RUN \
     && if [ "${BUILD_ARCH}" = "armv7" ]; then ARCH="armhf"; fi \
     && apt-get update 
 RUN apt-get -y install apt-transport-https wget ca-certificates apt-utils gnupg
-RUN wget https://homegear.eu/packages/Release.key && apt-key add Release.key && rm Release.key
-RUN echo 'deb https://homegear.eu/packages/Debian/ wheezy/' >> /etc/apt/sources.list.d/homegear.list
+#RUN wget https://homegear.eu/packages/Release.key && apt-key add Release.key && rm Release.key
+#RUN echo 'deb https://homegear.eu/packages/Debian/ wheezy/' >> /etc/apt/sources.list.d/homegear.list
+RUN curl -fsSL https://apt.homegear.eu/Release.key | gpg --dearmor -o /usr/share/keyrings/homegear-archive-keyring.gpg
+RUN echo 'deb [signed-by=/usr/share/keyrings/homegear-archive-keyring.gpg] https://apt.homegear.eu/debian/bookworm/homegear/stable/ bookworm main' > /etc/apt/sources.list.d/homegear.list 
 #RUN apt-get update && apt-get -y install ntp tzdata homegear homegear-nodes-core homegear-nodes-extra homegear-homematicbidcos homegear-homematicwired homegear-insteon homegear-max homegear-philipshue homegear-sonos homegear-kodi homegear-ipcam homegear-beckhoff homegear-knx homegear-enocean homegear-intertechno homegear-influxdb vim less htop
 RUN apt-get -y install ntp tzdata vim less htop
 RUN apt-get update && apt-get -y install homegear homegear-nodes-core homegear-nodes-extra homegear-homematicbidcos homegear-max
