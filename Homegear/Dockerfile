@@ -1,19 +1,19 @@
 # Taken from https://github.com/Homegear/Homegear-Docker/blob/master/rpi-stable/Dockerfile
 #FROM resin/rpi-raspbian:stretch
 #ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base:7.5.0
-ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:7.5.0
-
-
-FROM $BUILD_FROM
+ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:7.6.0
+# hadolint ignore=DL3006
+FROM ${BUILD_FROM}
 
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-MAINTAINER Jan Schulz-Hofen <hassio@0.jan.sh>
-#ENV architecture=${BUILD_ARCH}
+# Setup base system
 ARG BUILD_ARCH=amd64
 RUN \
     ARCH="${BUILD_ARCH}" \
+    && if [ "${BUILD_ARCH}" = "aarch64" ]; then ARCH="arm64"; fi \
+    && if [ "${BUILD_ARCH}" = "armv7" ]; then ARCH="armhf"; fi \
     && apt-get update 
 RUN apt-get -y install apt-transport-https wget ca-certificates apt-utils gnupg
 RUN wget https://homegear.eu/packages/Release.key && apt-key add Release.key && rm Release.key
