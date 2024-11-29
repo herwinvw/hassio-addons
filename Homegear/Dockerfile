@@ -11,8 +11,10 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 MAINTAINER Jan Schulz-Hofen <hassio@0.jan.sh>
 #ENV architecture=${BUILD_ARCH}
-
-RUN apt-get update 
+ARG BUILD_ARCH=amd64
+RUN \
+    ARCH="${BUILD_ARCH}" \
+    && apt-get update 
 RUN apt-get -y install apt-transport-https wget ca-certificates apt-utils gnupg
 RUN wget https://homegear.eu/packages/Release.key && apt-key add Release.key && rm Release.key
 RUN echo 'deb https://homegear.eu/packages/Raspbian/ stretch/' >> /etc/apt/sources.list.d/homegear.list
