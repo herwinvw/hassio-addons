@@ -10,7 +10,6 @@
   "apparmor": false,
   "init": false,
   "host_pid": true,
-  "full_access":true,
   "privileged": [
     "SYS_ADMIN",
     "SYS_RAWIO"
