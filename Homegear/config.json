@@ -1,6 +1,6 @@
 {
   "name": "Homegear",
-  "version": "0.21.21",
+  "version": "0.21.22",
   "url":"https://github.com/herwinvw/hassio-addons/",
   "slug": "rpi-homegear",
   "description": "Homegear as a Hassio add-on",
@@ -14,7 +14,7 @@
     "SYS_ADMIN",
     "SYS_RAWIO"
   ],
-  "full_access": true,
+  "gpio": true,
   "arch": [
     "amd64",
     "armhf",
