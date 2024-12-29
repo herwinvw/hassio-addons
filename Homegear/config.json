@@ -1,6 +1,6 @@
 {
   "name": "Homegear",
-  "version": "0.21.22",
+  "version": "0.21.23",
   "url":"https://github.com/herwinvw/hassio-addons/",
   "slug": "rpi-homegear",
   "description": "Homegear as a Hassio add-on",
@@ -32,6 +32,7 @@
   "schema": {
   },
   "devices": [
-    "/dev/spidev0.0"
+    "/dev/spidev0.0",
+    "/dev/mem"
   ]
 }
