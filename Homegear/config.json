@@ -1,6 +1,6 @@
 {
   "name": "Homegear",
-  "version": "0.21.25",
+  "version": "0.21.26",
   "url":"https://github.com/herwinvw/hassio-addons/",
   "slug": "rpi-homegear",
   "description": "Homegear as a Hassio add-on",
