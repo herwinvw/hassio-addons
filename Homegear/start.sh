@@ -21,6 +21,11 @@ else
 	cp -a /var/lib/homegear.data/modules/* /var/lib/homegear/modules/
 fi
 
+if test ! -e /etc/homegear/nodeBlueCredentialKey.txt; then
+        tr -dc A-Za-z0-9 < /dev/urandom | head -c 43 > /etc/homegear/nodeBlueCredentialKey.txt
+        chmod 400 /etc/homegear/nodeBlueCredentialKey.txt
+fi
+
 if ! [ -f /etc/homegear/dh1024.pem ]; then
 	openssl genrsa -out /etc/homegear/homegear.key 2048
 	openssl req -batch -new -key /etc/homegear/homegear.key -out /etc/homegear/homegear.csr
